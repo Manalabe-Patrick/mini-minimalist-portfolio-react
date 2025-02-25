@@ -11,16 +11,16 @@ function App() {
       <FloatingLinks />
       <Tabs defaultValue="home" className="w-100 lg:px-[10%] xl:px-[15%]">
         <TabsList className="w-[100%] flex justify-between py-10">
-          <TabsTrigger value="logo">
+          <TabsTrigger value="logo" className="bg-white">
             <span className="text-4xl font-bold text-customDark">PM</span>
           </TabsTrigger>
           <div>
-            <TabsTrigger value="home">HOME</TabsTrigger>
-            <TabsTrigger value="aboutme" className="px-10">
+            <TabsTrigger value="home" className="bg-white">HOME</TabsTrigger>
+            <TabsTrigger value="aboutme" className="px-10 bg-white">
               ABOUT ME
             </TabsTrigger>
-            <TabsTrigger value="portfolio">PORTFOLIO</TabsTrigger>
-            <TabsTrigger value="contact" className="pl-10">
+            <TabsTrigger value="portfolio" className="bg-white">PORTFOLIO</TabsTrigger>
+            <TabsTrigger value="contact" className="pl-10 bg-white">
               CONTACT
             </TabsTrigger>
           </div>

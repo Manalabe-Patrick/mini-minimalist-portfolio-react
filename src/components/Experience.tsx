@@ -1,4 +1,10 @@
-const Experience = () => {
+interface ExperienceProps {
+  duration: string,
+  position: string,
+  skills: string[]
+};
+
+const Experience: React.FC<ExperienceProps> = ({ duration, position, skills }) => {
   return (
     <>
       <div className="flex-[.05] lg:flex-[.2] flex items-center justify-center">
@@ -10,31 +16,16 @@ const Experience = () => {
         </div>
       </div>
       <div className="flex-[.9.5] lg:flex-[.8] text-customDark">
-        <p className="text-sm">August 2024 - Present</p>
-        <h1 className="my-2">
-          TAXUMO - <b>Software Engineer</b>
+        <p className="text-sm">{duration}</p>
+        <h1 className="my-2 text-xl">
+          <b>{position}</b>
         </h1>
         <ul>
-          <li className="text-sm">
-            • Configured and deployed web applications on Azure App Services
-          </li>
-          <li className="text-sm">
-            • Implemented automated build and release pipelines using Azure
-            DevOps
-          </li>
-          <li className="text-sm">
-            • Improved code to increase application speed by up to 15%.
-          </li>
-          <li className="text-sm">
-            • Built clean and scalable web applications and features from
-            scratch.
-          </li>
-          <li className="text-sm">
-            • Worked with the product team to deliver new features.
-          </li>
-          <li className="text-sm">
-            • Enhanced UI/UX by creating better front-end solutions.
-          </li>
+          {skills.map((exp: string, i: number) =>
+            <li className="text-sm my-3" key={i}>
+              • {exp}
+            </li>
+          )}
         </ul>
       </div>
     </>

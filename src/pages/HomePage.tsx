@@ -1,5 +1,4 @@
 import ProfileImage from "@/components/ProfileImage";
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { TabsList, TabsTrigger } from "@radix-ui/react-tabs";

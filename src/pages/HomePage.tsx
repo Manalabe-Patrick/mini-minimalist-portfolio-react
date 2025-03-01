@@ -1,5 +1,4 @@
 import ProfileImage from "@/components/ProfileImage";
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { TabsList, TabsTrigger } from "@radix-ui/react-tabs";
@@ -54,8 +53,13 @@ const HomePage = () => {
               <p className="text-customSecondary">
                 Experienced full-stack developer.
               </p>
-              <p className="text-customSecondary">Adaptable, upbeat, and a strong team player.</p>
-              <p className="text-customSecondary">I thrive in collaborative environments and stay ahead of industry trends.</p>
+              <p className="text-customSecondary">
+                Adaptable, upbeat, and a strong team player.
+              </p>
+              <p className="text-customSecondary">
+                I thrive in collaborative environments and stay ahead of
+                industry trends.
+              </p>
             </div>
           </motion.div>
 
@@ -67,7 +71,10 @@ const HomePage = () => {
               className="inline"
             >
               <TabsList className="inline">
-                <TabsTrigger value="contact" className="border border-2px border-customDark bg-white w-[200px] p-4 px-10 rounded-[100px] mb-4 md:mb-0">
+                <TabsTrigger
+                  value="contact"
+                  className="border border-2px border-customDark bg-white w-[200px] p-4 px-10 rounded-[100px] mb-4 md:mb-0"
+                >
                   <span className="text-customDark text-xs">CONTACT ME</span>
                 </TabsTrigger>
               </TabsList>
@@ -80,14 +87,16 @@ const HomePage = () => {
               transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
               className="inline"
             >
-              <Button
-                variant={"outline"}
-                className="w-[200px] p-7 px-12 rounded-[100px] md:ml-4 border-customDark"
-              >
-                <span className="text-customDark flex">
-                  SEE MY WORKS <ArrowRight className="ml-2" />
-                </span>
-              </Button>
+              <TabsList className="inline">
+                <TabsTrigger
+                  value="portfolio"
+                  className="ml-3 border border-2px border-customDark bg-white w-[250px] p-[19px] px-10 rounded-[100px] mb-4 md:mb-0"
+                >
+                  <span className="text-customDark text-xs flex">
+                    SEE MY WORKS <ArrowRight className="ml-2" size={18} />
+                  </span>
+                </TabsTrigger>
+              </TabsList>
             </motion.div>
           </div>
         </div>

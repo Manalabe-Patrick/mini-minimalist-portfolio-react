@@ -5,8 +5,6 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 
-
-
 interface Experience {
   duration: string;
   position: string;
@@ -35,7 +33,7 @@ const techStack: string[] = [
   "Javascript",
   "Typescript",
   "Tailwind",
-  "Bootstrap"
+  "Bootstrap",
 ];
 
 const experiences: Experience[] = [
@@ -49,7 +47,7 @@ const experiences: Experience[] = [
       "Built clean and scalable web applications and features from scratch.",
       "Worked with the product team to deliver new features.",
       "Enhanced UI/UX by creating better front-end solutions.",
-    ]
+    ],
   },
   {
     duration: "March 2023",
@@ -59,7 +57,7 @@ const experiences: Experience[] = [
       "Built clean and scalable web applications and features from scratch.",
       "Worked with the product team to deliver new features.",
       "Enhanced UI/UX by creating better front-end solutions.",
-    ]
+    ],
   },
   {
     duration: "August 2022",
@@ -70,7 +68,7 @@ const experiences: Experience[] = [
       "Ensured website compliance with DOH regulations.",
       "Wrote SQL queries to create reports and analyze data.",
       "Managed the hospital's information system to ensure smooth operations.",
-    ]
+    ],
   },
   {
     duration: "Feb 2022",
@@ -79,16 +77,25 @@ const experiences: Experience[] = [
       "Designed and developed dynamic, responsive websites using React.js.",
       "Collaborated with cross-functional teams through project management tools like Microsoft Teams and Jira.",
       "Implemented best practices in component-based architecture to build scalable and maintainable web applications.",
-    ]
-  }
+    ],
+  },
 ];
 
 const sections: Section[] = [];
 
 experiences.map((exp: Experience, i: number) => {
-  sections.push({ id: i, x: 0, y: 100, Component: Experience, props: { duration: exp.duration, position: exp.position, skills: exp.skills } })
-})
-
+  sections.push({
+    id: i,
+    x: 0,
+    y: 100,
+    Component: Experience,
+    props: {
+      duration: exp.duration,
+      position: exp.position,
+      skills: exp.skills,
+    },
+  });
+});
 
 const AboutMePage = () => {
   const refs = useRef<(HTMLDivElement | null)[]>([]);
@@ -108,7 +115,9 @@ const AboutMePage = () => {
             <p className="font-bold text-customDark lg:max-w-[90%] text-[30px] md:text-5xl mt-32">
               ABOUT ME
             </p>
-            <p className="text-customSecondary mt-10 mb-2">Hi, I’m <b>Patrick!</b></p>
+            <p className="text-customSecondary mt-10 mb-2">
+              Hi, I’m <b>Patrick!</b>
+            </p>
             <p className="text-customSecondary text-justify">
               Experienced software engineer and full-stack developer
               specializing in backend development, passionate about crafting
@@ -122,14 +131,14 @@ const AboutMePage = () => {
             </p>
 
             <div className="grid grid-cols-2">
-              {techStack.map((tech: string, i: number) =>
+              {techStack.map((tech: string, i: number) => (
                 <p className="flex my-0 text-customSecondary" key={i}>
                   <span key={i}>
                     <CheckCircle className="mr-2 pt-1" size={20} key={i} />
                   </span>
                   {tech}
                 </p>
-              )}
+              ))}
             </div>
             <p className="text-customSecondary font-bold my-4 mt-10">
               Skills sets:
@@ -211,8 +220,13 @@ const AboutMePage = () => {
               className="inline"
             >
               <TabsList className="block">
-                <TabsTrigger value="contact" className="mt-6 border border-2px border-customDark bg-white w-[200px] p-4 px-10 rounded-[100px] mb-4 md:mb-0">
-                  <span className="text-customDark text-xs flex">CONTACT ME <ArrowRight className="ml-2" size={16} /></span>
+                <TabsTrigger
+                  value="contact"
+                  className="mt-6 border border-2px border-customDark bg-white w-[200px] p-4 px-10 rounded-[100px] mb-4 md:mb-0"
+                >
+                  <span className="text-customDark text-xs flex">
+                    CONTACT ME <ArrowRight className="ml-2" size={16} />
+                  </span>
                 </TabsTrigger>
               </TabsList>
             </motion.div>

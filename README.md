@@ -1,26 +1,42 @@
-:rocket: Sleek and lightweight minimalist portfolio template built with React. Perfect for developers and designers who want a clean, modern, and minimalistic way to showcase their work :>
 
-:link: Preview: https://pat-portfolio.netlify.app/
+Sleek and lightweight minimalist portfolio template built with React. Perfect for developers and designers who want a clean, modern, and minimalistic way to showcase their work :>
 
-:zap: Fast and lightweight
 
-:art: Minimalist and modern design
 
-:mobile_phone: Fully responsive
+🔗 Preview: https://pat-portfolio.netlify.app
 
-:computer: Easy to customize
+## Features
 
-**Installation Guide: **
+- 🏃‍♂️ Fast and lightweight
+- 🎨 Minimalist and modern design
+- 📱 Fully responsive
+- 💻 Easy to customize
 
-1. Clone the repository:
-   `git clone https://github.com/Manalabe-Patrick/mini-minimalist-portfolio-react.git`
-2. Navigate to the project directory:
-   `cd mini-minimalist-portfolio-react `
-3. Install dependencies:
-   `npm install`
-4. Start the development server:
-   `npm run dev`
+## Run Project 
 
-Note: Update `SEO.tsx` to ensure proper SEO optimization.
+Clone the repository
+```bash
+  git clone https://github.com/Manalabe-Patrick/mini-minimalist-portfolio-react.git
+```
 
-:scroll: License : This project is open-source and available under the MIT License.
+Navigate to the project directory
+```bash
+  cd mini-minimalist-portfolio-react 
+```
+
+Install dependencies
+```bash
+  npm install
+```
+
+Start the development server
+```bash
+  npm run dev
+```
+
+*Note: Update SEO.tsx to ensure proper SEO optimization.*
+
+## Tech Stack
+
+**Client:** React, Vite, TailwindCSS, Shadcn/ui
+

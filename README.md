@@ -21,4 +21,6 @@
 4. Start the development server:
    `npm run dev`
 
+Note: Update `SEO.tsx` to ensure proper SEO optimization.
+
 :scroll: License : This project is open-source and available under the MIT License.
